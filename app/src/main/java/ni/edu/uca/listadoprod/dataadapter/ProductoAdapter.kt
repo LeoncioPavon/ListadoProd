@@ -1,12 +1,8 @@
 package ni.edu.uca.listadoprod.dataadapter
 
-import android.content.DialogInterface
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.coroutines.NonDisposableHandle.parent
 import ni.edu.uca.listadoprod.databinding.ItemlistaBinding
 import ni.edu.uca.listadoprod.dataclass.Producto
 
