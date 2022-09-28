@@ -1,19 +1,12 @@
 package ni.edu.uca.listadoprod.dataadapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.appcompat.view.menu.ActionMenuItemView
-import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
-import ni.edu.uca.listadoprod.R
 import ni.edu.uca.listadoprod.databinding.ItemlistaBinding
 import ni.edu.uca.listadoprod.dataclass.Producto
 
+@Suppress("DEPRECATION")
 class ProductoAdapter(
     val listProd: List<Producto>,
     private val onClickListener: (Producto) -> Unit,
@@ -35,11 +28,9 @@ class ProductoAdapter(
                 tvPrecioProd.text = producto.precio.toString()
                 itemView.setOnClickListener { onClickListener(producto) }
                 binding.btnDelete.setOnClickListener { onClickDelete(adapterPosition) }
-                binding.btnEdit.setOnClickListener{onClickUpdate(adapterPosition)}
+                binding.btnEdit.setOnClickListener { onClickUpdate(adapterPosition) }
             }
-
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductoHolder {
@@ -52,10 +43,7 @@ class ProductoAdapter(
 
     override fun onBindViewHolder(holder: ProductoHolder, position: Int) {
         holder.cargar(listProd[position], onClickListener, onClickDelete, onClickUpdate)
-
-
     }
 
     override fun getItemCount(): Int = listProd.size
-
 }
