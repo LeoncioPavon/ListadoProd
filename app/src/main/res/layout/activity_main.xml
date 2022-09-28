@@ -13,8 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
+        android:textColor="@color/black"
         android:layout_marginRight="10dp"
-        android:text="ID"
+        android:text="Código del poroducto"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -26,7 +27,11 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:textAlignment="center"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:inputType="number"
+        />
 
     <TextView
         android:id="@+id/tvNombre"
@@ -35,6 +40,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
+        android:textColor="@color/black"
         android:text="Nombre del Producto"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -46,6 +52,9 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
+        android:inputType="text"
+        android:textStyle="bold"
+        android:textColor="@color/black"
         android:textSize="20sp" />
 
     <TextView
@@ -55,8 +64,9 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
-        android:text="Precio"
+        android:text="PrecioC$"
         android:textSize="20sp"
+        android:textColor="@color/black"
         android:textStyle="bold" />
 
     <EditText
@@ -66,36 +76,44 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
-        android:textSize="20sp" />
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:inputType="numberDecimal"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:gravity="center"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnAgregar"
+            android:id="@+id/btnAddProd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/design_default_color_secondary"
             android:text="Agregar"
-            android:textSize="20sp" />
+            android:textStyle="bold"
+            android:textSize="15sp"
+            app:cornerRadius="20dp"/>
 
         <Button
-            android:id="@+id/btnLimpiar"
+            android:id="@+id/btnClear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/design_default_color_secondary"
             android:text="Limpiar"
-            android:textSize="20sp" />
-
+            android:textStyle="bold"
+            android:textSize="15sp"
+            app:cornerRadius="20dp" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
